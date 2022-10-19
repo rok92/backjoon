@@ -1,2 +1,6 @@
 # backjoon
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+<hr>
+
+#### For coding test, have to be committed everyday
+
+##### Using Python, MySQL Query
