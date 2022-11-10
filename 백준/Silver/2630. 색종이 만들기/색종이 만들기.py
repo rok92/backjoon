@@ -1,6 +1,7 @@
 N = int(input())
 square = [list(map(int, input().split())) for _ in range(N)]
-result = []
+white = []
+blue = []
 
 def paper(x, y, n) :
     color = square[x][y]
@@ -13,11 +14,11 @@ def paper(x, y, n) :
                 paper(x+n//2, y+n//2, n//2)
                 return
     if color == 1 :
-        result.append(1)
+        blue.append(n)
     else :
-        result.append(0)
+        white.append(n)
     return
 
 paper(0, 0, N)
-print(result.count(0))
-print(result.count(1))       
+print(len(white))
+print(len(blue))
