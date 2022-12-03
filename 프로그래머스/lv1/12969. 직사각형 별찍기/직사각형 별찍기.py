@@ -1,3 +1,5 @@
 a, b = map(int, input().strip().split(' '))
 for i in range(b):
-    print('*'*a)
+    for j in range(a):
+        print('*', end='')
+    print()
