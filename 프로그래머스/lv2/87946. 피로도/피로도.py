@@ -6,7 +6,6 @@ def solution(k, dungeons):
         count = 0
         tmp = k
         for a, b in i:
-            # print(a, b)
             if tmp >= a :
                 tmp -= b
                 count += 1
