@@ -1,11 +1,11 @@
 def solution(s):
-    cnt = 0
+    list_s = []
     for i in s:
         if i == '(':
-            cnt += 1
+            list_s.append(i)
         if i == ')':
-            cnt -= 1
-        if cnt < 0 :
-            return False
-
-    return cnt == 0
+            try:
+                list_s.pop()
+            except IndexError:
+                return False
+    return len(list_s) == 0
