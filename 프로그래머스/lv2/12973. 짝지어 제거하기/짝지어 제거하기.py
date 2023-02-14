@@ -4,9 +4,11 @@ def solution(s):
         if not answer:
             answer.append(s[i])
         else:
-            if s[i] == answer[-1]:
+            if answer[-1] == s[i]:
                 answer.pop()
             else:
                 answer.append(s[i])
-    if answer: return 0
-    else: return 1
+    if len(answer) == 0:
+        return 1
+    else:
+        return 0
