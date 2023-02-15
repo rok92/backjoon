@@ -1,5 +1,4 @@
 def solution(n):
-    k = list(str(n))
-    answer = list(map(int, k[::-1]))
-    print(answer)
+    a = list(str(n))
+    answer = list(map(int,a[::-1]))
     return answer
