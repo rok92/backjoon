@@ -1,8 +1,11 @@
 def solution(a, b):
-    answer = 0
-    if a < b :
-        answer = list(range(a, b+1))
-    else :
-        answer = list(range(b, a+1))
-    
+    answer = []
+    if a == b:
+        return a
+    elif a > b:
+        for i in range(b, a+1):
+            answer.append(i)
+    elif a < b:
+        for i in range(a, b+1):
+            answer.append(i)
     return sum(answer)
