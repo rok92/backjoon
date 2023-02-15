@@ -9,4 +9,6 @@ def solution(left, right):
             answer += i
         else:
             answer -= i
+    print(answer)
     return answer
+
