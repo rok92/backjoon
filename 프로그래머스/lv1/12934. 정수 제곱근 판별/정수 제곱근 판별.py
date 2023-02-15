@@ -1,8 +1,10 @@
+import math
+
 def solution(n):
     answer = 0
-    k = n**0.5
-    if k.is_integer():
-        answer = (k+1)**2
-    else :
+    a = math.sqrt(n)
+    if a.is_integer() == True:
+        answer = (a+1)**2
+    else:
         answer = -1
     return answer
