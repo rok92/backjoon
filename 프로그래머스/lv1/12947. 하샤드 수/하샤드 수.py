@@ -1,12 +1,11 @@
 def solution(x):
     answer = True
-    arr = list(str(x))
-    a = 0
-    for i in range(len(arr)):
-        a += int(arr[i])
-        if x % a == 0:
+    array = list(str(x))
+    sum_arr = 0
+    for i in range(len(array)):
+        sum_arr += int(array[i])
+        if x % sum_arr == 0:
             answer = True
         else:
             answer = False
-        
     return answer
