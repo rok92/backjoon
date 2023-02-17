@@ -8,5 +8,5 @@ def solution(s):
             else:
                 answer += i[j].lower()
         answer += ' '
-        
+    print(answer)
     return answer[0:-1]
