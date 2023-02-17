@@ -7,5 +7,6 @@ def solution(s):
             try:
                 list_s.pop()
             except IndexError:
-                return False
+                    return False
+            
     return len(list_s) == 0
