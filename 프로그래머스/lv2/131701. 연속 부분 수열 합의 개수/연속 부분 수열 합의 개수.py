@@ -4,6 +4,6 @@ def solution(elements):
     doubleE = elements*2
     for i in range(len(elements)):
         for j in range(len(elements)):
-            elementSet.add(sum(doubleE[j:j+i+1]))
+            elementSet.add(sum(doubleE[j:j+i]))
     answer = len(elementSet)
     return answer
