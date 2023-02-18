@@ -1,7 +1,8 @@
 def gcd(a, b):
-    while b > 0:
-        a, b = b, a%b
-    return a
+    if a% b == 0:
+        return b
+    else:
+        return gcd(b, a%b)
 
 def lcm(a,b):
     return (a*b / gcd(a,b))
