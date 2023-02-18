@@ -2,11 +2,11 @@ from collections import Counter
 
 def solution(want, number, discount):
     answer = 0
-    dic = {}
+    diction = {}
     for i in range(len(want)):
-        dic[want[i]] = number[i]
-    print(dic)
+        diction[want[i]] = number[i]
     for i in range(len(discount)):
-        if dic == Counter(discount[i:i+10]):
+        if diction == Counter(discount[i:i+10]):
+            print(diction)
             answer += 1
     return answer
