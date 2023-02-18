@@ -1,13 +1,14 @@
 from collections import Counter
 
+
+
 def solution(k, tangerine):
     answer = 0
-    s = 0
-    tangerine.sort(reverse = True)
-    tan = Counter(tangerine).most_common()
-    for i in tan:
-        s += i[1]
+    tan = Counter(tangerine)
+    tanger = sorted(tan.values(), reverse = True)
+    for i in tanger:
+        k -= i
         answer += 1
-        if s >= k:
-            return answer
+        if k <= 0:
+            break
     return answer
