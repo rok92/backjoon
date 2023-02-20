@@ -1,5 +1,3 @@
-from itertools import chain
-
 def solution(food):
     answer = []
     for i in range(1, len(food)) :
