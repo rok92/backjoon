@@ -4,6 +4,8 @@ def solution(clothes):
     for i in clothes:
         key = i[1]
         value = i[0]
+        print(key)
+        print(value)
         if key in closet:
             closet[key].append(value)
         else:
