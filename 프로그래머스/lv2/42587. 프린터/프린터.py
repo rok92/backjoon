@@ -1,12 +1,12 @@
 def solution(priorities, location):
     answer = 0
     idx = list(range(len(priorities)))
-    idx[location] = 'target'
+    print(idx)
     while True:
         if priorities[0] == max(priorities):
             answer += 1
             
-            if idx[0] == 'target':
+            if idx[0] == location:
                 return answer
                 break
             else:
