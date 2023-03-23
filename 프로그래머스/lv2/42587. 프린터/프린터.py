@@ -1,11 +1,20 @@
 def solution(priorities, location):
     answer = 0
+    idx = list(range(len(priorities)))
+    idx[location] = 'target'
     while True:
-        max_num = max(priorities)
-        for i in range(len(priorities)):
-            if max_num == priorities[i]:
-                answer += 1
-                priorities[i] = 0
-                max_num = max(priorities)
-                if i == location:
-                    return answer
+        if priorities[0] == max(priorities):
+            answer += 1
+            
+            if idx[0] == 'target':
+                return answer
+                break
+            else:
+                priorities.pop(0)
+                idx.pop(0)
+        else:
+            priorities.append(priorities.pop(0))
+            idx.append(idx.pop(0))
+                
+            
+            
