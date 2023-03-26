@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 n = int(input())
 
 count = 1
@@ -24,4 +27,3 @@ if result == False:
 else:
   for i in pp:
     print(i)
-    
