@@ -1,15 +1,14 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-nge = list(map(int, input().split()))
+A = int(input())
+nums = list(map(int, input().split()))
 stack = []
+nge = [-1] * A
 
-answer = [-1] * n
-
-for i in range(n):
-  while len(stack) != 0 and nge[stack[-1]] < nge[i]:
-    answer[stack.pop()] = nge[i]
+for i in range(A):
+  while stack and nums[stack[-1]] < nums[i]:
+    nge[stack.pop()] = nums[i]
   stack.append(i)
-    
-print(*answer)
+answer = ' '.join(map(str, nge))
+print(answer)
