@@ -1,9 +1,8 @@
-import sys
-
-input = sys.stdin.readline
 n = input()
-alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alpha = [0]*26
 
-for i in range(len(alpha)):
-  ans = n.count(alpha[i])
-  print(ans, end=' ')
+for i in n:
+  alpha[ord(i) - 97] += 1
+for i in alpha:
+  print(i, end=' ')
+  
