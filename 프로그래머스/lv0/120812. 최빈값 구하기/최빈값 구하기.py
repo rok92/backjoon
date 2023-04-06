@@ -1,15 +1,9 @@
 from collections import Counter
 
 def solution(array):
-    answer = []
-    a = Counter(array)
-    mc = a.most_common()
-    maxi = mc[0][1]
-    
-    for i in mc:
-        if i[1] == maxi:
-            answer.append(i[0])
-    if len(answer) >= 2:
-        return -1
-    else:
-        return answer[0]
+    while len(array) != 0:
+        for i, a in enumerate(set(array)):
+            print(i, a)
+            array.remove(a)
+        if i == 0: return a
+    return -1
